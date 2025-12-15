@@ -1,7 +1,13 @@
 {
-  "version": "2.0.0",
+  "version": "2.1.0",
   "lastUpdated": "2024-12-15",
   "categories": [
+    {
+      "id": "general",
+      "name": "Revue Globale",
+      "icon": "star",
+      "description": "Analyses complètes et généralistes"
+    },
     {
       "id": "architecture",
       "name": "Architecture",
@@ -40,6 +46,15 @@
     }
   ],
   "prompts": [
+    {
+      "id": "full-code-review",
+      "title": "Code Review Complète (All-in-One)",
+      "description": "Audit complet 4-en-1 : Sécurité, Performance, Architecture et Clean Code.",
+      "category": "general",
+      "tags": ["Full Review", "Best Practices", "Security", "Performance"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/full-code-review.md",
+      "difficulty": "intermediate"
+    },
     {
       "id": "architecture-general",
       "title": "Audit Architecture & SOLID",
