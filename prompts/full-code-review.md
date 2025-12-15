@@ -28,9 +28,12 @@ Tu dois analyser le code selon les axes suivants, en étant particulièrement vi
 * **Attributs PHP 8+ :** Utilisation des Attributs pour le Routing et l'ORM (au lieu des annotations).
 * **Business Logic :** Les contrôleurs doivent être maigres ("Thin Controller"). La logique métier doit être dans des Services, Handlers ou Pattern CQRS.
 * **Repository Pattern :** Les Repositories ne doivent servir qu'à récupérer des données, pas à traiter la logique métier.
+* **Respect des bonnes pratiques :** Respecter scrupuleusement les standards officiels et les "Best Practices" de la documentation Symfony.
 
 ### 4. 💎 Clean Code & SOLID
-* **Naming (DDD) :** Adopte le langage ubiquitaire (Ubiquitous Language). Les noms de classes/méthodes doivent refléter le métier (`ConfirmOrder` vs `save`), pas la technique.
+* **Naming & Encapsulation :** Adopte le langage ubiquitaire. Les noms de méthodes doivent refléter une intention métier plutôt qu'une modification technique d'état.
+    *   ❌ **Interdit** : `$enrollment->setCompletionStatus(CompletionStatusEnum::WaitingForValidation)` (Setter anémique).
+    *   ✅ **Requis** : `$enrollment->markAsWaitingForValidation()` (Intention explicite).
 * **Complexité :** Détecte les "God Classes" ou les méthodes trop longues (> 20 lignes) et trop complexes (if/else imbriqués).
 * **Principe de Responsabilité Unique (SRP) :** Une classe ne fait qu'une seule chose.
 * **Early Return :** Privilégie les retours anticipés pour éviter l'imbrication (`else`).
@@ -43,7 +46,7 @@ Tu dois analyser le code selon les axes suivants, en étant particulièrement vi
     *   **No Bundles** : Pas de `UserBundle` dans `src/`.
     *   **Config** : Secrets en `.env`, config métier en `parameters` (préfixe `app.`).
     *   **i18n** : Usage de clés de traduction (`label.login`) au lieu de texte en dur.
-    *   **Forms** : Boutons Submit dans les templates Twig, pas dans les classes PHP.
+    *   **Forms & CSRF** : Interdiction d'utiliser `$request->get()` ou `$request->files->get()`. Tout traitement de données POST doit passer par un FormType Symfony associé à un DTO ou une Entité. Boutons Submit dans les templates Twig, pas dans les classes PHP.
     *   **Templates** : Nommage `snake_case` et partiels `_prefixed`.
 *   **Modern PHP 8.2 (Checklist) :**
     *   **Syntaxe** : Constructor Property Promotion, Arrow Functions (`fn()`), Nullsafe (`?->`), Match expressions.
