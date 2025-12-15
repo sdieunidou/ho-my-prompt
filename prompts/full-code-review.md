@@ -47,7 +47,11 @@ Tu dois analyser le code selon les axes suivants, en étant particulièrement vi
     * **Complexité** : Alerte sur les méthodes > 20 lignes ou les "God Classes".
 * **Loi de Demeter** : Évite les chaînages excessifs (`$this->getA()->getB()->getC()`).
 * **Testabilité** : Suggère l'usage de `ClockInterface` (PSR-20) plutôt que `new DateTime`.
-* **DTO Pattern** : Utilise des méthodes statiques (Factory Methods) pour la création (`MyDto::create($entity)`).
+* **DTO Purity (Séparation des Contextes) :**
+    * Le DTO d'Input ne doit contenir **que** les données soumises par l'utilisateur (Form/JSON).
+    * ❌ **Interdit** : Hydrater le DTO dans le contrôleur avec des données système (`$dto->currentUser = $this->getUser()`).
+    * ✅ **Requis** : Passer le contexte (User, IP, etc.) en **arguments distincts** à la méthode du Service (ex: `$service->handle($dto, $user)`).
+* **DTO Factories** : Utilise des méthodes statiques (Factory Methods) pour la création depuis une entité (`MyDto::fromEntity($entity)`).
 
 ### 5. 🧬 Modern PHP 8.2+ & Typage
 * **Type Safety :** Présence de `declare(strict_types=1);`. Typage strict partout (paramètres, retours, propriétés). Usage de `mixed`, `void`, `never`.
