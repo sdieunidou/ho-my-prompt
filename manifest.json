@@ -1,68 +1,38 @@
 {
-  "version": "2.1.0",
+  "version": "3.0.0",
   "lastUpdated": "2024-12-15",
   "categories": [
     {
-      "id": "general",
-      "name": "Revue Globale",
+      "id": "lead-dev",
+      "name": "Lead Developer",
       "icon": "star",
-      "description": "Analyses complètes et généralistes"
+      "description": "Revues de code complètes et multidimensionnelles"
     },
     {
-      "id": "architecture",
-      "name": "Architecture",
-      "icon": "layers",
-      "description": "Design Patterns, SOLID et Structure"
-    },
-    {
-      "id": "symfony",
-      "name": "Symfony Ecosystem",
-      "icon": "code",
-      "description": "Standards, Best Practices et Framework"
-    },
-    {
-      "id": "performance",
-      "name": "Performance",
-      "icon": "zap",
-      "description": "Doctrine, SQL et Optimisation"
-    },
-    {
-      "id": "security",
-      "name": "Sécurité",
-      "icon": "shield",
-      "description": "Audits de sécurité et OWASP"
-    },
-    {
-      "id": "quality",
-      "name": "Code Quality",
-      "icon": "file",
-      "description": "Clean Code, Modern PHP et Lisibilité"
-    },
-    {
-      "id": "testing",
-      "name": "Testing",
+      "id": "qa",
+      "name": "Quality Assurance",
       "icon": "bug",
-      "description": "Stratégie de test et Mocking"
+      "description": "Stratégies de test et audit de testabilité"
     }
   ],
   "prompts": [
     {
       "id": "full-code-review",
-      "title": "Code Review Complète (All-in-One)",
-      "description": "Audit complet 4-en-1 : Sécurité, Performance, Architecture et Clean Code.",
-      "category": "general",
-      "tags": ["Full Review", "Best Practices", "Security", "Performance"],
+      "title": "Code Review Complète (Lead Dev)",
+      "description": "Audit expert 360° : Sécurité, Performance, Architecture, Clean Code et Modern PHP.",
+      "category": "lead-dev",
+      "tags": ["Full Review", "Best Practices", "Security", "Performance", "Clean Code"],
       "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/full-code-review.md",
-      "difficulty": "intermediate"
+      "difficulty": "advanced"
     },
     {
       "id": "testing-strategy",
-      "title": "Stratégie de Tests",
-      "description": "Analyse de testabilité et identification des cas limites (Edge Cases).",
-      "category": "testing",
-      "tags": ["Testing", "QA", "Mocking"],
+      "title": "Stratégie de Test & Testabilité (QA Lead)",
+      "description": "Audit de testabilité, détection de dépendances cachées et plan de test complet.",
+      "category": "qa",
+      "tags": ["Testing", "QA", "Mocking", "Testability", "PHPUnit"],
       "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/testing-strategy.md",
-      "difficulty": "intermediate"
+      "difficulty": "advanced"
     }
   ]
 }
