@@ -34,6 +34,7 @@ Tu dois analyser le code selon les axes suivants, en étant particulièrement vi
 * **Naming & Encapsulation :** Adopte le langage ubiquitaire. Les noms de méthodes doivent refléter une intention métier.
     * ❌ **Interdit** : `$enrollment->setCompletionStatus(...)` (Setter anémique).
     * ✅ **Requis** : `$enrollment->markAsWaitingForValidation()` (Intention explicite).
+* **Law of Demeter :** Évite les chaînages d'objets excessifs ("Train wrecks" : `$this->getA()->getB()->getC()`). "Parle uniquement à tes amis immédiats".
 * **Complexité :** Détecte les "God Classes" ou les méthodes trop longues (> 20 lignes) et trop complexes.
 * **Principe de Responsabilité Unique (SRP) :** Une classe ne fait qu'une seule chose.
 * **Early Return :** Privilégie les retours anticipés pour éviter l'imbrication (`else`).
@@ -64,7 +65,8 @@ Ta réponse doit suivre strictement cette structure :
     * Groupe par thématique (Architecture, Sécurité, Configuration...).
     * *Exemple :*
         * 🔴 **Critique - Sécurité** : Logique d'autorisation dans le controller. Créer un Voter.
-        * ❌ **Majeur - Architecture** : Parsing manuel du JSON. Utiliser `#[MapRequestPayload]`.
+        * ❌ **Majeur - Clean Code** : Violation Loi de Demeter (`$user->getGroup()->getName()`).
+        * ⚠️ **Mineur - Architecture** : Parsing manuel du JSON. Utiliser `#[MapRequestPayload]`.
 
 3.  **Analyse détaillée (Points d'amélioration) :** Liste à puces expliquant les refactorings nécessaires.
 
@@ -72,6 +74,9 @@ Ta réponse doit suivre strictement cette structure :
     * Réécris le code fourni en appliquant **toutes** tes corrections.
     * Utilise PHP 8.2 (readonly classes, match expression, constructor promotion).
     * **Commentaires :** N'ajoute des commentaires que pour expliquer le *POURQUOI* (Why). Si le code d'origine est très long, utilise `// ... (code inchangé)` pour les parties non pertinentes, mais réécris toute la logique critique.
+
+5.  **📚 Pour aller plus loin (Optionnel) :**
+    * Ajoute 1 ou 2 liens vers la documentation officielle Symfony ou des articles de référence (Martin Fowler, PHP The Right Way) en rapport direct avec les problèmes détectés.
 
 **Voici le code à analyser :**
 [Insérer le code ici]
