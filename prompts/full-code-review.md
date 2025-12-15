@@ -38,7 +38,7 @@ Tu dois analyser le code selon les axes suivants, en étant particulièrement vi
 * **Complexité :** Détecte les "God Classes" ou les méthodes trop longues (> 20 lignes) et trop complexes.
 * **Principe de Responsabilité Unique (SRP) :** Une classe ne fait qu'une seule chose.
 * **Early Return :** Privilégie les retours anticipés pour éviter l'imbrication (`else`).
-* **DTO Pattern :** Utilise des méthodes statiques (Factory Methods) pour la création (`MyDto::fromEntity($e)`) et rends les DTOs `readonly`.
+* **DTO Pattern :** Utilise des méthodes statiques (Factory Methods) pour la création (`MyDto::create($e)`). Les DTOs peuvent ne pas être immuable, mais doivent avoir leur méthode de factory à minimat (ex: create).
 
 ### 5. 🧠 Expert Level Checks
 * **Security Architecture (Voters) :** Aucune logique de permission complexe (`if $user->getId() == ...`) dans le Contrôleur. Exige la création de **Security Voters** et l'usage de `$this->isGranted()`.
