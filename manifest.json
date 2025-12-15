@@ -1,0 +1,252 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2024-12-15",
+  "categories": [
+    {
+      "id": "architecture",
+      "name": "Architecture & Conception",
+      "icon": "layers",
+      "description": "Vérification de la structure, SOLID, et pérennité du code"
+    },
+    {
+      "id": "symfony",
+      "name": "Écosystème Symfony",
+      "icon": "code",
+      "description": "Standards Symfony, Injection de dépendances et bonnes pratiques"
+    },
+    {
+      "id": "performance",
+      "name": "Performance & Doctrine",
+      "icon": "zap",
+      "description": "Optimisation SQL, N+1, DTOs et mémoire"
+    },
+    {
+      "id": "security",
+      "name": "Sécurité",
+      "icon": "shield",
+      "description": "OWASP, Voters, Sanitization et protection des données"
+    },
+    {
+      "id": "clean-code",
+      "name": "Clean Code",
+      "icon": "file",
+      "description": "Lisibilité, nommage, complexité et typage strict"
+    },
+    {
+      "id": "testing",
+      "name": "Testabilité",
+      "icon": "bug",
+      "description": "Mocking, cas limites et couverture de tests"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "solid-srp",
+      "title": "Audit SOLID & Responsabilité Unique",
+      "description": "Vérification stricte des principes SOLID (focus SRP)",
+      "category": "architecture",
+      "tags": ["SOLID", "SRP", "Architecture"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/solid-srp.md",
+      "difficulty": "advanced"
+    },
+    {
+      "id": "design-patterns",
+      "title": "Pertinence des Design Patterns",
+      "description": "Identification et suggestion de Design Patterns",
+      "category": "architecture",
+      "tags": ["Design Patterns", "Refactoring"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/design-patterns.md",
+      "difficulty": "advanced"
+    },
+    {
+      "id": "coupling",
+      "title": "Détection du Couplage Fort",
+      "description": "Analyse des dépendances et suggestions de découplage",
+      "category": "architecture",
+      "tags": ["Couplage", "Interfaces", "Dependency Inversion"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/coupling.md",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "hexagonal-ddd",
+      "title": "Architecture Hexagonale / DDD",
+      "description": "Vérification de l'isolation Infrastructure vs Domain",
+      "category": "architecture",
+      "tags": ["DDD", "Hexagonal", "Architecture"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/hexagonal-ddd.md",
+      "difficulty": "advanced"
+    },
+    {
+      "id": "symfony-standards",
+      "title": "Conformité aux Standards Symfony",
+      "description": "Respect de l'arborescence et des conventions Symfony",
+      "category": "symfony",
+      "tags": ["Symfony", "Standards", "Best Practices"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/symfony-standards.md",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "dependency-injection",
+      "title": "Audit Injection de Dépendances",
+      "description": "Détection des instanciations manuelles vs DI",
+      "category": "symfony",
+      "tags": ["Dependency Injection", "Service Container", "Autowiring"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/dependency-injection.md",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "events-vs-services",
+      "title": "Events vs Services",
+      "description": "Analyse EventDispatcher vs appels directs",
+      "category": "symfony",
+      "tags": ["Events", "Decoupling", "Services"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/events-vs-services.md",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "validation-forms",
+      "title": "Validation & Formulaires",
+      "description": "Usage du composant Validator vs if manuels",
+      "category": "symfony",
+      "tags": ["Validation", "Forms", "Constraints"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/validation-forms.md",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "legacy-check",
+      "title": "Bye-bye le Legacy",
+      "description": "Détection code déprécié et anciennes pratiques",
+      "category": "symfony",
+      "tags": ["Legacy", "Refactoring", "PHP 8", "Attributes"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/legacy-check.md",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "doctrine-nplus1",
+      "title": "Chasse aux problèmes N+1",
+      "description": "Détection des boucles sur entités générant des requêtes",
+      "category": "performance",
+      "tags": ["Doctrine", "Performance", "SQL", "N+1"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/doctrine-nplus1.md",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "dql-optimization",
+      "title": "Optimisation DQL/QueryBuilder",
+      "description": "Complexité requêtes, index et jointures",
+      "category": "performance",
+      "tags": ["Doctrine", "DQL", "QueryBuilder", "Performance"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/dql-optimization.md",
+      "difficulty": "advanced"
+    },
+    {
+      "id": "hydration-dto",
+      "title": "Hydratation & DTO",
+      "description": "Suggestion de DTOs pour lecture seule",
+      "category": "performance",
+      "tags": ["DTO", "Hydration", "Doctrine", "Performance"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/hydration-dto.md",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "memory-leaks",
+      "title": "Fuites Mémoire & Processus Lourds",
+      "description": "Optimisation scripts batch/messenger",
+      "category": "performance",
+      "tags": ["Memory", "Batch", "Messenger", "Performance"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/memory-leaks.md",
+      "difficulty": "advanced"
+    },
+    {
+      "id": "security-voters",
+      "title": "Audit Voters & Permissions",
+      "description": "Vérification du contrôle d'accès via Voters",
+      "category": "security",
+      "tags": ["Security", "Voters", "Access Control"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/security-voters.md",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "sanitization-injection",
+      "title": "Sanitization & Injections (XSS/SQLi)",
+      "description": "Vérification échappement données et vulnérabilités",
+      "category": "security",
+      "tags": ["Security", "XSS", "SQL Injection", "Sanitization"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/sanitization-injection.md",
+      "difficulty": "advanced"
+    },
+    {
+      "id": "sensitive-data",
+      "title": "Fuite de Données Sensibles",
+      "description": "Détection logs/code exposant des secrets",
+      "category": "security",
+      "tags": ["Security", "Privacy", "GDPR", "Secrets"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/sensitive-data.md",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "csrf-protection",
+      "title": "CSRF & Protection Routes",
+      "description": "Sécurisation des actions destructrices",
+      "category": "security",
+      "tags": ["Security", "CSRF", "Routing"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/csrf-protection.md",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "cognitive-complexity",
+      "title": "Complexité Cognitive & Early Return",
+      "description": "Simplification des structures de contrôle",
+      "category": "clean-code",
+      "tags": ["Clean Code", "Complexity", "Early Return", "Refactoring"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/cognitive-complexity.md",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "semantic-naming",
+      "title": "Nommage Sémantique",
+      "description": "Vérification nommage explicite et anglais",
+      "category": "clean-code",
+      "tags": ["Naming", "Clean Code", "English"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/semantic-naming.md",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "exception-handling",
+      "title": "Gestion des Exceptions",
+      "description": "Typage et gestion correcte des erreurs",
+      "category": "clean-code",
+      "tags": ["Exceptions", "Error Handling", "Clean Code"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/exception-handling.md",
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "strict-typing",
+      "title": "Typage Strict (PHP 8+)",
+      "description": "Vérification des types et declare(strict_types)",
+      "category": "clean-code",
+      "tags": ["Typing", "PHP 8", "Strict Types"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/strict-typing.md",
+      "difficulty": "beginner"
+    },
+    {
+      "id": "testability-mocking",
+      "title": "Testabilité & Mocking",
+      "description": "Facilité de mocker les dépendances",
+      "category": "testing",
+      "tags": ["Testing", "Mocking", "Interfaces"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/testability-mocking.md",
+      "difficulty": "advanced"
+    },
+    {
+      "id": "edge-cases",
+      "title": "Couverture des Cas Limites",
+      "description": "Suggestion de scénarios de tests edge cases",
+      "category": "testing",
+      "tags": ["Testing", "Edge Cases", "QA"],
+      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/edge-cases.md",
+      "difficulty": "intermediate"
+    }
+  ]
+}
+
