@@ -56,69 +56,6 @@
       "difficulty": "intermediate"
     },
     {
-      "id": "architecture-general",
-      "title": "Audit Architecture & SOLID",
-      "description": "Analyse structurelle globale : SOLID, Couplage et Design Patterns.",
-      "category": "architecture",
-      "tags": ["SOLID", "Architecture", "Design Patterns"],
-      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/architecture-general.md",
-      "difficulty": "advanced"
-    },
-    {
-      "id": "architecture-ddd",
-      "title": "Architecture Hexagonale & DDD",
-      "description": "Vérification de l'isolation du Domaine et des règles DDD.",
-      "category": "architecture",
-      "tags": ["DDD", "Hexagonal", "Domain"],
-      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/architecture-ddd.md",
-      "difficulty": "advanced"
-    },
-    {
-      "id": "symfony-ecosystem",
-      "title": "The Symfony Way",
-      "description": "Conformité aux standards, Injection de dépendances et composants natifs.",
-      "category": "symfony",
-      "tags": ["Symfony", "Dependency Injection", "Best Practices"],
-      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/symfony-ecosystem.md",
-      "difficulty": "intermediate"
-    },
-    {
-      "id": "performance-doctrine",
-      "title": "Performance & Doctrine",
-      "description": "Optimisation SQL, chasse aux N+1 et gestion mémoire.",
-      "category": "performance",
-      "tags": ["Doctrine", "SQL", "Performance"],
-      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/performance-doctrine.md",
-      "difficulty": "advanced"
-    },
-    {
-      "id": "security-audit",
-      "title": "Audit de Sécurité Complet",
-      "description": "Checklist OWASP : Injections, Voters, CSRF et Données sensibles.",
-      "category": "security",
-      "tags": ["Security", "OWASP", "Voters"],
-      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/security-audit.md",
-      "difficulty": "intermediate"
-    },
-    {
-      "id": "modern-php",
-      "title": "Modern PHP 8.2+ Upgrade",
-      "description": "Adoption des nouvelles features : Readonly, Enums, Match, Attributs.",
-      "category": "quality",
-      "tags": ["PHP 8", "Modernization", "Refactoring"],
-      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/modern-php.md",
-      "difficulty": "beginner"
-    },
-    {
-      "id": "clean-code",
-      "title": "Clean Code & Lisibilité",
-      "description": "Simplification cognitive, Nommage et Early Return.",
-      "category": "quality",
-      "tags": ["Clean Code", "Naming", "Refactoring"],
-      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/clean-code.md",
-      "difficulty": "beginner"
-    },
-    {
       "id": "testing-strategy",
       "title": "Stratégie de Tests",
       "description": "Analyse de testabilité et identification des cas limites (Edge Cases).",
