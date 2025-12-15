@@ -46,7 +46,7 @@ Tu dois analyser le code selon les axes suivants, en étant particulièrement vi
     *   **No Bundles** : Pas de `UserBundle` dans `src/`.
     *   **Config** : Secrets en `.env`, config métier en `parameters` (préfixe `app.`).
     *   **i18n** : Usage de clés de traduction (`label.login`) au lieu de texte en dur.
-    *   **Forms & CSRF** : Interdiction d'utiliser `$request->get()` ou `$request->files->get()`. Tout traitement de données POST doit passer par un FormType Symfony associé à un DTO ou une Entité. Boutons Submit dans les templates Twig, pas dans les classes PHP.
+    *   **Forms & CSRF** : Interdiction d'utiliser `$request->get()` ou `$request->files->get()`. Tout traitement de données POST doit passer par un FormType (on créé une classe dédiée, pas de createFormBuilder dans les controllers) Symfony associé à un DTO ou une Entité. Boutons Submit dans les templates Twig, pas dans les classes PHP.
     *   **Templates** : Nommage `snake_case` et partiels `_prefixed`.
 *   **Modern PHP 8.2 (Checklist) :**
     *   **Syntaxe** : Constructor Property Promotion, Arrow Functions (`fn()`), Nullsafe (`?->`), Match expressions.
@@ -73,7 +73,7 @@ Ta réponse doit suivre strictement cette structure :
 
 4.  **Code Refactorisé (The Gold Standard) :**
     * Réécris le code fourni en appliquant **toutes** tes corrections.
-    * Utilise PHP 8.2/8.3 (readonly classes, match expression, constructor promotion).
+    * Utilise PHP 8.2 (readonly classes, match expression, constructor promotion).
     * Ajoute des commentaires DocBlock uniquement si le typage PHP ne suffit pas.
 
 **Voici le code à analyser :**
