@@ -47,7 +47,7 @@ Tu dois analyser le code selon les axes suivants, en étant particulièrement vi
     * **No Bundles** : Pas de `UserBundle` dans `src/`.
     * **Config** : Secrets en `.env`, config métier en `parameters` (préfixe `app.`).
     * **i18n** : Usage de clés de traduction (`label.login`).
-    * **Forms & CSRF** : Interdiction d'utiliser `$request->get()` pour le POST. Usage strict de FormType ou de DTOs avec `#[MapRequestPayload]`.
+    * **Forms & CSRF** : Interdiction d'utiliser `$request->get()` pour le POST. Usage strict de FormType ou de DTOs avec `#[MapRequestPayload]`. Obligation de créer une classe dédié pour son formulaire: aucun appel à `createFormBuilder` dans ses controlleurs.
 * **Modern PHP 8.2+ (Checklist) :**
     * **Syntaxe** : Constructor Property Promotion, Arrow Functions (`fn()`), Nullsafe (`?->`), Match expressions.
     * **Typage Strict** : Tout doit être typé. Usage de `readonly`, Union/Intersection Types (`A|B`), `mixed`, `void`, `never`.
@@ -73,6 +73,7 @@ Ta réponse doit suivre strictement cette structure :
 4.  **Code Refactorisé (The Gold Standard) :**
     * Réécris le code fourni en appliquant **toutes** tes corrections.
     * Utilise PHP 8.2 (readonly classes, match expression, constructor promotion).
+    * **⚠️ IMPORTANT - Context Extrapolation : Si une bonne pratique (ex: Loi de Demeter) nécessite de modifier une classe non fournie (ex: une Entité), TU DOIS SIMULER cette modification. Ajoute le code de la méthode manquante (ex: dans l'Entité) pour montrer l'architecture idéale. Ne fais aucun compromis technique sous prétexte que le contexte manque.**
     * **Commentaires :** N'ajoute des commentaires que pour expliquer le *POURQUOI* (Why). Si le code d'origine est très long, utilise `// ... (code inchangé)` pour les parties non pertinentes, mais réécris toute la logique critique.
 
 5.  **📚 Pour aller plus loin (Optionnel) :**
