@@ -24,15 +24,6 @@
       "tags": ["Full Review", "Best Practices", "Security", "Performance", "Clean Code"],
       "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/full-code-review.md",
       "difficulty": "advanced"
-    },
-    {
-      "id": "testing-strategy",
-      "title": "Stratégie de Test & Testabilité (QA Lead)",
-      "description": "Audit de testabilité, détection de dépendances cachées et plan de test complet.",
-      "category": "qa",
-      "tags": ["Testing", "QA", "Mocking", "Testability", "PHPUnit"],
-      "contentUrl": "https://raw.githubusercontent.com/sdieunidou/ho-my-prompt/main/prompts/testing-strategy.md",
-      "difficulty": "advanced"
     }
   ]
 }
